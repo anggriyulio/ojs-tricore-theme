@@ -1,0 +1,132 @@
+/**
+ * @file plugins/themes/tricore/styles/footer.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Site footer: page footer content (Settings > Website > Appearance),
+ *  social links and the bottom bar.
+ */
+
+.tricore_footer {
+	background: @tricore-footer-bg;
+	color: @tricore-footer-text;
+
+	a {
+		color: @tricore-footer-text;
+		text-decoration: underline;
+		text-decoration-color: fade(@tricore-footer-text, 40%);
+
+		&:hover,
+		&:focus {
+			color: @tricore-footer-text;
+			text-decoration-color: @tricore-footer-text;
+		}
+	}
+
+	:focus-visible {
+		outline-color: @tricore-footer-text;
+	}
+}
+
+.tricore_footer_inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: @tricore-space-6;
+	padding-block: @tricore-space-7;
+
+	@media (min-width: @tricore-bp-md) {
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+.tricore_footer_content {
+	line-height: @tricore-leading;
+
+	p:first-child { margin-top: 0; }
+	p:last-child { margin-bottom: 0; }
+}
+
+.tricore_footer_heading {
+	margin: 0 0 @tricore-space-3;
+	font-size: @tricore-text-base;
+	color: @tricore-footer-text;
+}
+
+.tricore_social_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: @tricore-space-2;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tricore_footer .tricore_social_link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: 1px solid fade(@tricore-footer-text, 35%);
+	border-radius: 50%;
+	font-size: 18px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background: @tricore-footer-text;
+		color: @tricore-footer-bg;
+	}
+}
+
+.tricore_footer_bottom {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: @tricore-space-3;
+	padding-block: @tricore-space-4;
+	border-top: 1px solid fade(@tricore-footer-text, 15%);
+	font-size: @tricore-text-sm;
+}
+
+// Theme credit and the OJS/PKP brand, right side of the bottom bar
+.tricore_footer_credits {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: @tricore-space-3 @tricore-space-5;
+}
+
+.tricore_footer .tricore_footer_credit {
+	font-size: @tricore-text-sm;
+	text-decoration: none;
+	opacity: 0.85;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		opacity: 1;
+	}
+}
+
+.tricore_footer_brand img {
+	display: block;
+	max-height: 32px;
+	width: auto;
+}
+
+// The PKP brand image is dark: invert it on dark footers
+.tricore-footer-brand-contrast() when (lightness(@tricore-footer-text) > 50%) {
+	.tricore_footer_brand img {
+		filter: brightness(0) invert(1);
+		opacity: 0.85;
+	}
+}
+.tricore-footer-brand-contrast() when (lightness(@tricore-footer-text) <= 50%) {}
+.tricore-footer-brand-contrast();

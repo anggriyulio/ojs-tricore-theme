@@ -1,0 +1,36 @@
+/**
+ * @file plugins/themes/tricore/styles/index.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Main stylesheet of the Tricore theme.
+ *
+ * Two layers:
+ *  1. Base: the default theme stylesheet shipped with the running OJS version.
+ *     It styles every frontend page (article, issue, archive, login,
+ *     registration, search, ...) and always matches that version's markup,
+ *     so Tricore does not have to re-implement or port those styles.
+ *  2. Tricore: tokens and the Tricore design (header, footer, layout, homepage,
+ *     cards). Later rules override the base layer.
+ *
+ * Child themes add a third layer with
+ * modifyStyle('tricore-stylesheet', ['addLess' => ['styles/child.less']]).
+ */
+
+// 1. Base layer
+@import "../../default/styles/index.less";
+
+// 2. Tricore layer
+@import "tokens.less";
+@import "base.less";
+@import "layout.less";
+@import "header.less";
+@import "footer.less";
+@import "components.less";
+@import "objects.less";
+@import "pages/home.less";
+@import "pages/archive.less";
+@import "pages/site.less";
+@import "pages/auth.less";
+@import "print.less";
