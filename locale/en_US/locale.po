@@ -1,0 +1,353 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.themes.tricore.name"
+msgstr "Tricore Theme (3Core)"
+
+msgid "plugins.themes.tricore.description"
+msgstr "Parent theme of the Core Series by 3Core: design tokens, colour pickers, homepage content blocks and shared components."
+
+msgid "plugins.themes.tricore.option.group.colours"
+msgstr "Colours"
+
+msgid "plugins.themes.tricore.option.group.typography"
+msgstr "Typography"
+
+msgid "plugins.themes.tricore.option.group.layout"
+msgstr "Layout"
+
+msgid "plugins.themes.tricore.option.group.homepage"
+msgstr "Homepage content"
+
+msgid "plugins.themes.tricore.option.group.social"
+msgstr "Social media"
+
+msgid "plugins.themes.tricore.option.primaryColour.label"
+msgstr "Primary colour"
+
+msgid "plugins.themes.tricore.option.primaryColour.description"
+msgstr "Links, buttons and highlights. Text on this colour is set to black or white automatically."
+
+msgid "plugins.themes.tricore.option.secondaryColour.label"
+msgstr "Secondary colour"
+
+msgid "plugins.themes.tricore.option.secondaryColour.description"
+msgstr "Hero section and secondary buttons."
+
+msgid "plugins.themes.tricore.option.accentColour.label"
+msgstr "Accent colour"
+
+msgid "plugins.themes.tricore.option.accentColour.description"
+msgstr "Small highlights such as badges and metric values."
+
+msgid "plugins.themes.tricore.option.headerBackground.label"
+msgstr "Header background"
+
+msgid "plugins.themes.tricore.option.headerBackground.description"
+msgstr "Background of the site header and main navigation."
+
+msgid "plugins.themes.tricore.option.footerBackground.label"
+msgstr "Footer background"
+
+msgid "plugins.themes.tricore.option.footerBackground.description"
+msgstr "Background of the site footer."
+
+msgid "plugins.themes.tricore.option.typography.label"
+msgstr "Font"
+
+msgid "plugins.themes.tricore.option.typography.description"
+msgstr "All fonts are served from this site, no external font service is used."
+
+msgid "plugins.themes.tricore.option.typography.system"
+msgstr "System font (fastest)"
+
+msgid "plugins.themes.tricore.option.typography.notoSans"
+msgstr "Noto Sans"
+
+msgid "plugins.themes.tricore.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif headings with Noto Sans body"
+
+msgid "plugins.themes.tricore.option.typography.lora_openSans"
+msgstr "Lora headings with Open Sans body"
+
+msgid "plugins.themes.tricore.option.typography.lato"
+msgstr "Lato"
+
+msgid "plugins.themes.tricore.option.headerLayout.label"
+msgstr "Header layout"
+
+msgid "plugins.themes.tricore.option.headerLayout.left"
+msgstr "Logo on the left, menu on the right"
+
+msgid "plugins.themes.tricore.option.headerLayout.centered"
+msgstr "Logo and menu centred"
+
+msgid "plugins.themes.tricore.option.containerWidth.label"
+msgstr "Page width"
+
+msgid "plugins.themes.tricore.option.containerWidth.narrow"
+msgstr "Narrow (1080px)"
+
+msgid "plugins.themes.tricore.option.containerWidth.normal"
+msgstr "Normal (1200px)"
+
+msgid "plugins.themes.tricore.option.containerWidth.wide"
+msgstr "Wide (1360px)"
+
+msgid "plugins.themes.tricore.option.borderRadius.label"
+msgstr "Corner rounding"
+
+msgid "plugins.themes.tricore.option.borderRadius.description"
+msgstr "Rounding of cards, buttons and images."
+
+msgid "plugins.themes.tricore.option.borderRadius.none"
+msgstr "None"
+
+msgid "plugins.themes.tricore.option.borderRadius.small"
+msgstr "Small"
+
+msgid "plugins.themes.tricore.option.borderRadius.medium"
+msgstr "Medium"
+
+msgid "plugins.themes.tricore.option.borderRadius.large"
+msgstr "Large"
+
+msgid "plugins.themes.tricore.option.showHero.label"
+msgstr "Hero section"
+
+msgid "plugins.themes.tricore.option.showHero.option"
+msgstr "Show a hero section with title, subtitle and buttons at the top of the journal homepage."
+
+msgid "plugins.themes.tricore.option.heroTitle.label"
+msgstr "Hero title"
+
+msgid "plugins.themes.tricore.option.heroTitle.description"
+msgstr "Leave empty to use the journal name."
+
+msgid "plugins.themes.tricore.option.heroSubtitle.label"
+msgstr "Hero subtitle"
+
+msgid "plugins.themes.tricore.option.heroSubtitle.description"
+msgstr "One or two sentences about the journal. Leave empty to use the journal summary."
+
+msgid "plugins.themes.tricore.option.ctaPrimaryLabel.label"
+msgstr "Primary button label"
+
+msgid "plugins.themes.tricore.option.ctaPrimaryLabel.description"
+msgstr "Leave empty to use \"Current Issue\"."
+
+msgid "plugins.themes.tricore.option.ctaPrimaryUrl.label"
+msgstr "Primary button link"
+
+msgid "plugins.themes.tricore.option.ctaPrimaryUrl.description"
+msgstr "A full http(s) address or a path on this site. Leave empty to link to the current issue."
+
+msgid "plugins.themes.tricore.option.ctaSecondaryLabel.label"
+msgstr "Secondary button label"
+
+msgid "plugins.themes.tricore.option.ctaSecondaryLabel.description"
+msgstr "Leave empty to use \"Submissions\"."
+
+msgid "plugins.themes.tricore.option.ctaSecondaryUrl.label"
+msgstr "Secondary button link"
+
+msgid "plugins.themes.tricore.option.ctaSecondaryUrl.description"
+msgstr "A full http(s) address or a path on this site. Leave empty to link to the submission guidelines."
+
+msgid "plugins.themes.tricore.option.showDescription.label"
+msgstr "Journal summary"
+
+msgid "plugins.themes.tricore.option.showDescription.option"
+msgstr "Show the journal summary on the homepage."
+
+msgid "plugins.themes.tricore.option.showCurrentIssue.label"
+msgstr "Current issue"
+
+msgid "plugins.themes.tricore.option.showCurrentIssue.option"
+msgstr "Show the table of contents of the current issue on the homepage."
+
+msgid "plugins.themes.tricore.option.latestArticlesCount.label"
+msgstr "Number of latest articles on the homepage (0 hides the block)"
+
+msgid "plugins.themes.tricore.option.metrics.label"
+msgstr "Journal metrics"
+
+msgid "plugins.themes.tricore.option.metrics.description"
+msgstr "One metric per line as Label|Value, for example: Acceptance rate|25%. Up to 8 lines are shown."
+
+msgid "plugins.themes.tricore.option.indexingInfo.label"
+msgstr "Indexing information"
+
+msgid "plugins.themes.tricore.option.indexingInfo.description"
+msgstr "Databases and indexes the journal is listed in. Shown on the homepage."
+
+msgid "plugins.themes.tricore.option.socialFacebook.label"
+msgstr "Facebook"
+
+msgid "plugins.themes.tricore.option.socialX.label"
+msgstr "X (Twitter)"
+
+msgid "plugins.themes.tricore.option.socialInstagram.label"
+msgstr "Instagram"
+
+msgid "plugins.themes.tricore.option.socialLinkedin.label"
+msgstr "LinkedIn"
+
+msgid "plugins.themes.tricore.option.socialYoutube.label"
+msgstr "YouTube"
+
+msgid "plugins.themes.tricore.option.social.description"
+msgstr "Full https:// addresses of the journal profiles. Empty fields are hidden. Shown in the footer."
+
+msgid "plugins.themes.tricore.error.colour"
+msgstr "Enter a colour as a hex code, for example #1f5fbf."
+
+
+msgid "plugins.themes.tricore.error.url"
+msgstr "Enter a full http(s) address or a path on this site."
+
+msgid "plugins.themes.tricore.error.absoluteUrl"
+msgstr "Enter a full address starting with https://."
+
+msgid "plugins.themes.tricore.latestArticles"
+msgstr "Latest Articles"
+
+msgid "plugins.themes.tricore.metrics"
+msgstr "Journal Metrics"
+
+msgid "plugins.themes.tricore.indexing"
+msgstr "Indexed In"
+
+msgid "plugins.themes.tricore.followUs"
+msgstr "Follow us"
+
+msgid "plugins.themes.tricore.menu.toggle"
+msgstr "Menu"
+
+msgid "plugins.themes.tricore.submenu.toggle"
+msgstr "Show submenu for {$title}"
+
+msgid "plugins.themes.tricore.social.label"
+msgstr "{$network} (opens in a new tab)"
+
+msgid "plugins.themes.tricore.option.group.sidebar"
+msgstr "Sidebar"
+
+msgid "plugins.themes.tricore.option.group.metrics"
+msgstr "Article statistics"
+
+msgid "plugins.themes.tricore.option.sidebarPages.label"
+msgstr "Show the sidebar on"
+
+msgid "plugins.themes.tricore.option.sidebarPages.description"
+msgstr "Each page type is set separately. The sidebar blocks themselves are chosen under Appearance > Setup > Sidebar. Login and registration pages never show the sidebar."
+
+msgid "plugins.themes.tricore.option.sidebarPages.homepage"
+msgstr "Journal homepage"
+
+msgid "plugins.themes.tricore.option.sidebarPages.archive"
+msgstr "Archive"
+
+msgid "plugins.themes.tricore.option.sidebarPages.issue"
+msgstr "Issue (table of contents)"
+
+msgid "plugins.themes.tricore.option.sidebarPages.article"
+msgstr "Article page"
+
+msgid "plugins.themes.tricore.option.sidebarPages.about"
+msgstr "About pages (About, Editorial Team, Submissions, Contact)"
+
+msgid "plugins.themes.tricore.option.sidebarPages.staticPage"
+msgstr "Static pages"
+
+msgid "plugins.themes.tricore.option.sidebarPages.search"
+msgstr "Search"
+
+msgid "plugins.themes.tricore.option.sidebarPages.announcements"
+msgstr "Announcements"
+
+msgid "plugins.themes.tricore.option.showMetrics.label"
+msgstr "Views and downloads"
+
+msgid "plugins.themes.tricore.option.showMetrics.option"
+msgstr "Show the number of views and downloads on article lists, the archive and the article page."
+
+msgid "plugins.themes.tricore.option.showMetrics.description"
+msgstr "Counts come from the OJS usage statistics (views of the abstract page, downloads of galley and supplementary files) and update when the statistics are processed."
+
+msgid "plugins.themes.tricore.metrics.views"
+msgstr "Views"
+
+msgid "plugins.themes.tricore.metrics.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.tricore.metrics.viewsCount"
+msgstr "{$number} views"
+
+msgid "plugins.themes.tricore.metrics.downloadsCount"
+msgstr "{$number} downloads"
+
+msgid "plugins.themes.tricore.metrics.issue"
+msgstr "Total for the articles in this issue"
+
+msgid "plugins.themes.tricore.site.journals"
+msgstr "Our Journals"
+
+msgid "plugins.themes.tricore.site.register"
+msgstr "Create an account"
+
+msgid "plugins.themes.tricore.site.stats.journals"
+msgstr "Journals"
+
+msgid "plugins.themes.tricore.site.stats.issues"
+msgstr "Issues"
+
+msgid "plugins.themes.tricore.site.stats.articles"
+msgstr "Articles"
+
+msgid "plugins.themes.tricore.site.issuesCount"
+msgstr "{$number} issues"
+
+msgid "plugins.themes.tricore.site.articlesCount"
+msgstr "{$number} articles"
+
+msgid "plugins.themes.tricore.site.ctaTitle"
+msgstr "Ready to contribute?"
+
+msgid "plugins.themes.tricore.site.ctaText"
+msgstr "Create an account to submit a manuscript, review for our journals or be notified when new issues are published."
+
+msgid "plugins.themes.tricore.site.badge"
+msgstr "{$journals} journals · {$articles} published articles"
+
+msgid "plugins.themes.tricore.site.online"
+msgstr "online"
+
+msgid "plugins.themes.tricore.site.print"
+msgstr "print"
+
+msgid "plugins.themes.tricore.site.searchTitle"
+msgstr "Find an article"
+
+msgid "plugins.themes.tricore.site.searchLead"
+msgstr "Search titles, abstracts and authors across all journals on this portal."
+
+msgid "plugins.themes.tricore.site.searchPlaceholder"
+msgstr "Keywords, title or author"
+
+msgid "plugins.themes.tricore.site.searchNote"
+msgstr "Counts include published issues and articles of every journal."
+
+msgid "plugins.themes.tricore.footer.credit"
+msgstr "Tricore theme by 3Core"
+
+msgid "plugins.themes.tricore.footer.newTab"
+msgstr "(opens in a new tab)"

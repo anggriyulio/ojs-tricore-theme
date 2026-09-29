@@ -1,0 +1,213 @@
+/**
+ * @file plugins/themes/tricore/styles/components.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Reusable Tricore components: buttons, sections, cards.
+ */
+
+.tricore_btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: @tricore-space-2;
+	padding: @tricore-space-3 @tricore-space-5;
+	border: 1px solid transparent;
+	border-radius: @tricore-radius;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.tricore_btn_primary {
+	background: @tricore-primary;
+	border-color: @tricore-primary;
+	color: @tricore-on-primary;
+
+	&:hover,
+	&:focus {
+		background: @tricore-primary-hover;
+		border-color: @tricore-primary-hover;
+		color: @tricore-on-primary;
+	}
+}
+
+.tricore_btn_outline {
+	background: transparent;
+	border-color: currentColor;
+	color: @tricore-primary;
+
+	&:hover,
+	&:focus {
+		background: @tricore-primary;
+		border-color: @tricore-primary;
+		color: @tricore-on-primary;
+	}
+}
+
+// Sections on the homepage and other pages
+.tricore_section {
+	margin-block: @tricore-space-7;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.pkp_structure_main .tricore_section_title,
+.tricore_section_title {
+	display: flex;
+	align-items: center;
+	gap: @tricore-space-3;
+	margin: 0 0 @tricore-space-5;
+	font-size: @tricore-text-xl;
+	font-weight: 700;
+
+	&::before {
+		content: "";
+		flex: 0 0 auto;
+		width: 4px;
+		height: 1.1em;
+		background: @tricore-accent;
+		border-radius: 2px;
+	}
+}
+
+// Cards
+.tricore_card_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: @tricore-space-4;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tricore_card {
+	display: flex;
+	flex-direction: column;
+	gap: @tricore-space-2;
+	padding: @tricore-space-5;
+	background: @tricore-bg;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+	box-shadow: @tricore-shadow;
+	transition: box-shadow 0.15s ease, border-color 0.15s ease;
+
+	&:hover,
+	&:focus-within {
+		border-color: fade(@tricore-primary, 45%);
+		box-shadow: @tricore-shadow-lg;
+	}
+}
+
+.pkp_structure_main .tricore_card_title,
+.tricore_card_title {
+	margin: 0;
+	font-size: @tricore-text-lg;
+	line-height: 1.35;
+
+	a {
+		color: @tricore-text;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: @tricore-primary;
+			text-decoration: underline;
+		}
+	}
+}
+
+.pkp_structure_main .tricore_card_meta,
+.tricore_card_meta {
+	margin: 0;
+	font-size: @tricore-text-sm;
+	line-height: 1.5;
+	color: @tricore-text-muted;
+}
+
+// Announcements
+.cmp_announcements {
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+	overflow: hidden;
+}
+
+// Views / downloads counters (Metrics::present, metricsInline.tpl)
+.tricore_metrics_inline {
+	display: flex;
+	flex-wrap: wrap;
+	gap: @tricore-space-1 @tricore-space-4;
+	margin: @tricore-space-2 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: @tricore-text-sm;
+	line-height: 1.4;
+	color: @tricore-text-muted;
+
+	li {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.fa {
+		color: @tricore-primary;
+	}
+}
+
+.obj_article_summary .tricore_metrics_inline {
+	margin-top: @tricore-space-3;
+}
+
+.tricore_card .tricore_metrics_inline {
+	margin-top: auto;
+	padding-top: @tricore-space-2;
+}
+
+.page_issue_archive .obj_issue_summary .tricore_metrics_inline {
+	margin: 0;
+	padding: 0 @tricore-space-4 @tricore-space-4;
+}
+
+// Article page: views/downloads in the details column
+.obj_article_details .tricore_article_metrics_list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: @tricore-space-3;
+	margin: @tricore-space-2 0 0;
+}
+
+.tricore_article_metric {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 2px;
+	padding: @tricore-space-3;
+	background: @tricore-bg;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+
+	dt {
+		font-size: @tricore-text-sm;
+		color: @tricore-text-muted;
+
+		.fa {
+			color: @tricore-primary;
+		}
+	}
+
+	dd {
+		margin: 0;
+		font-family: @tricore-font-heading;
+		font-size: @tricore-text-xl;
+		font-weight: 700;
+		line-height: 1.2;
+		color: @tricore-text;
+	}
+}

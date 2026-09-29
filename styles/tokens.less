@@ -1,0 +1,124 @@
+/**
+ * @file plugins/themes/tricore/styles/tokens.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Design tokens of the Tricore theme.
+ *
+ * The @tricore-* values below are defaults. At compile time the plugin appends
+ * the values chosen in Settings > Website > Appearance (see
+ * TricoreThemePlugin::addTokensToLess and classes/Tokens.php); LESS uses the
+ * last definition, so saved options win over these defaults.
+ *
+ * Child themes change tokens by:
+ *  - changing option defaults with modifyOptionsConfig() (user can still override), or
+ *  - adding a LESS file with modifyStyle('tricore-stylesheet', ['addLess' => [...]])
+ *    for tokens that are not theme options (spacing, shadows, ...).
+ *
+ * Every token is also exposed as a CSS custom property (--tricore-*).
+ */
+
+// Colours (theme options)
+@tricore-primary:        #1f5fbf;
+@tricore-secondary:      #0f2a44;
+@tricore-accent:         #e0a526;
+@tricore-header-bg:      #ffffff;
+@tricore-footer-bg:      #0f2a44;
+
+// Readable text on each colour (computed by the plugin)
+@tricore-on-primary:     #ffffff;
+@tricore-on-secondary:   #ffffff;
+@tricore-on-accent:      #1a1d23;
+@tricore-header-text:    #1a1d23;
+@tricore-footer-text:    #ffffff;
+
+// Neutral palette
+@tricore-text:           #1a1d23;
+@tricore-text-muted:     #5b6472;
+@tricore-bg:             #ffffff;
+@tricore-surface:        #f5f7fa;
+@tricore-border:         #dde2e8;
+
+// Typography (theme option)
+@tricore-font-body:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+@tricore-font-heading:   @tricore-font-body;
+@tricore-font-mono:      ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+// Type scale (rem, 1rem = 16px)
+@tricore-text-sm:        0.875rem;
+@tricore-text-base:      1rem;
+@tricore-text-lg:        1.125rem;
+@tricore-text-xl:        1.375rem;
+@tricore-text-2xl:       1.75rem;
+@tricore-text-3xl:       2.25rem;
+@tricore-leading:        1.6;
+@tricore-leading-tight:  1.25;
+
+// Spacing scale: 4 8 12 16 24 32 48 64 96
+@tricore-space-1:        4px;
+@tricore-space-2:        8px;
+@tricore-space-3:        12px;
+@tricore-space-4:        16px;
+@tricore-space-5:        24px;
+@tricore-space-6:        32px;
+@tricore-space-7:        48px;
+@tricore-space-8:        64px;
+@tricore-space-9:        96px;
+
+// Shape (theme options)
+@tricore-radius:         8px;
+@tricore-container:      1200px;
+@tricore-shadow:         0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+@tricore-shadow-lg:      0 8px 24px rgba(16, 24, 40, 0.12);
+
+// Breakpoints
+@tricore-bp-sm:          576px;
+@tricore-bp-md:          768px;
+@tricore-bp-lg:          992px;
+@tricore-sidebar:        300px;
+
+// Derived colours
+@tricore-primary-hover:  darken(@tricore-primary, 8%);
+@tricore-primary-soft:   fade(@tricore-primary, 10%);
+@tricore-focus:          @tricore-primary;
+
+:root {
+	--tricore-primary: @tricore-primary;
+	--tricore-primary-hover: @tricore-primary-hover;
+	--tricore-primary-soft: @tricore-primary-soft;
+	--tricore-secondary: @tricore-secondary;
+	--tricore-accent: @tricore-accent;
+	--tricore-header-bg: @tricore-header-bg;
+	--tricore-footer-bg: @tricore-footer-bg;
+	--tricore-on-primary: @tricore-on-primary;
+	--tricore-on-secondary: @tricore-on-secondary;
+	--tricore-on-accent: @tricore-on-accent;
+	--tricore-header-text: @tricore-header-text;
+	--tricore-footer-text: @tricore-footer-text;
+	--tricore-text: @tricore-text;
+	--tricore-text-muted: @tricore-text-muted;
+	--tricore-bg: @tricore-bg;
+	--tricore-surface: @tricore-surface;
+	--tricore-border: @tricore-border;
+	--tricore-font-body: @tricore-font-body;
+	--tricore-font-heading: @tricore-font-heading;
+	--tricore-radius: @tricore-radius;
+	--tricore-container: @tricore-container;
+	--tricore-shadow: @tricore-shadow;
+}
+
+// Map the tokens onto the variables of the default theme styles (base layer),
+// so every page the default theme styles picks up the Tricore colours and fonts.
+@primary:                @tricore-primary;
+@bg-base:                @tricore-header-bg;
+@text-bg-base:           @tricore-header-text;
+@bg-base-border-color:   @tricore-border;
+@text:                   @tricore-text;
+@text-light:             @tricore-text-muted;
+@bg-border-color:        @tricore-border;
+@font:                   @tricore-font-body;
+@font-heading:           @tricore-font-heading;
+@font-site-title:        @tricore-font-heading;
+@radius:                 @tricore-radius;
+@rem:                    16px;

@@ -1,0 +1,353 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.themes.tricore.name"
+msgstr "Tema Tricore (3Core)"
+
+msgid "plugins.themes.tricore.description"
+msgstr "Tema induk Core Series dari 3Core: design token, pemilih warna, blok konten beranda, dan komponen bersama."
+
+msgid "plugins.themes.tricore.option.group.colours"
+msgstr "Warna"
+
+msgid "plugins.themes.tricore.option.group.typography"
+msgstr "Tipografi"
+
+msgid "plugins.themes.tricore.option.group.layout"
+msgstr "Tata letak"
+
+msgid "plugins.themes.tricore.option.group.homepage"
+msgstr "Konten beranda"
+
+msgid "plugins.themes.tricore.option.group.social"
+msgstr "Media sosial"
+
+msgid "plugins.themes.tricore.option.primaryColour.label"
+msgstr "Warna utama"
+
+msgid "plugins.themes.tricore.option.primaryColour.description"
+msgstr "Tautan, tombol, dan sorotan. Warna teks di atasnya otomatis hitam atau putih."
+
+msgid "plugins.themes.tricore.option.secondaryColour.label"
+msgstr "Warna sekunder"
+
+msgid "plugins.themes.tricore.option.secondaryColour.description"
+msgstr "Bagian hero dan tombol sekunder."
+
+msgid "plugins.themes.tricore.option.accentColour.label"
+msgstr "Warna aksen"
+
+msgid "plugins.themes.tricore.option.accentColour.description"
+msgstr "Sorotan kecil seperti badge dan nilai metrik."
+
+msgid "plugins.themes.tricore.option.headerBackground.label"
+msgstr "Latar header"
+
+msgid "plugins.themes.tricore.option.headerBackground.description"
+msgstr "Latar header situs dan menu navigasi utama."
+
+msgid "plugins.themes.tricore.option.footerBackground.label"
+msgstr "Latar footer"
+
+msgid "plugins.themes.tricore.option.footerBackground.description"
+msgstr "Latar footer situs."
+
+msgid "plugins.themes.tricore.option.typography.label"
+msgstr "Font"
+
+msgid "plugins.themes.tricore.option.typography.description"
+msgstr "Semua font disajikan dari situs ini, tanpa layanan font eksternal."
+
+msgid "plugins.themes.tricore.option.typography.system"
+msgstr "Font sistem (paling cepat)"
+
+msgid "plugins.themes.tricore.option.typography.notoSans"
+msgstr "Noto Sans"
+
+msgid "plugins.themes.tricore.option.typography.notoSerif_notoSans"
+msgstr "Judul Noto Serif, isi Noto Sans"
+
+msgid "plugins.themes.tricore.option.typography.lora_openSans"
+msgstr "Judul Lora, isi Open Sans"
+
+msgid "plugins.themes.tricore.option.typography.lato"
+msgstr "Lato"
+
+msgid "plugins.themes.tricore.option.headerLayout.label"
+msgstr "Tata letak header"
+
+msgid "plugins.themes.tricore.option.headerLayout.left"
+msgstr "Logo di kiri, menu di kanan"
+
+msgid "plugins.themes.tricore.option.headerLayout.centered"
+msgstr "Logo dan menu di tengah"
+
+msgid "plugins.themes.tricore.option.containerWidth.label"
+msgstr "Lebar halaman"
+
+msgid "plugins.themes.tricore.option.containerWidth.narrow"
+msgstr "Sempit (1080px)"
+
+msgid "plugins.themes.tricore.option.containerWidth.normal"
+msgstr "Normal (1200px)"
+
+msgid "plugins.themes.tricore.option.containerWidth.wide"
+msgstr "Lebar (1360px)"
+
+msgid "plugins.themes.tricore.option.borderRadius.label"
+msgstr "Sudut membulat"
+
+msgid "plugins.themes.tricore.option.borderRadius.description"
+msgstr "Kelengkungan sudut kartu, tombol, dan gambar."
+
+msgid "plugins.themes.tricore.option.borderRadius.none"
+msgstr "Tanpa"
+
+msgid "plugins.themes.tricore.option.borderRadius.small"
+msgstr "Kecil"
+
+msgid "plugins.themes.tricore.option.borderRadius.medium"
+msgstr "Sedang"
+
+msgid "plugins.themes.tricore.option.borderRadius.large"
+msgstr "Besar"
+
+msgid "plugins.themes.tricore.option.showHero.label"
+msgstr "Bagian hero"
+
+msgid "plugins.themes.tricore.option.showHero.option"
+msgstr "Tampilkan bagian hero berisi judul, subjudul, dan tombol di bagian atas beranda jurnal."
+
+msgid "plugins.themes.tricore.option.heroTitle.label"
+msgstr "Judul hero"
+
+msgid "plugins.themes.tricore.option.heroTitle.description"
+msgstr "Kosongkan untuk memakai nama jurnal."
+
+msgid "plugins.themes.tricore.option.heroSubtitle.label"
+msgstr "Subjudul hero"
+
+msgid "plugins.themes.tricore.option.heroSubtitle.description"
+msgstr "Satu atau dua kalimat tentang jurnal. Kosongkan untuk memakai ringkasan jurnal."
+
+msgid "plugins.themes.tricore.option.ctaPrimaryLabel.label"
+msgstr "Label tombol utama"
+
+msgid "plugins.themes.tricore.option.ctaPrimaryLabel.description"
+msgstr "Kosongkan untuk memakai \"Terbitan Terkini\"."
+
+msgid "plugins.themes.tricore.option.ctaPrimaryUrl.label"
+msgstr "Tautan tombol utama"
+
+msgid "plugins.themes.tricore.option.ctaPrimaryUrl.description"
+msgstr "Alamat http(s) lengkap atau path di situs ini. Kosongkan untuk menautkan ke terbitan terkini."
+
+msgid "plugins.themes.tricore.option.ctaSecondaryLabel.label"
+msgstr "Label tombol sekunder"
+
+msgid "plugins.themes.tricore.option.ctaSecondaryLabel.description"
+msgstr "Kosongkan untuk memakai \"Penyerahan\"."
+
+msgid "plugins.themes.tricore.option.ctaSecondaryUrl.label"
+msgstr "Tautan tombol sekunder"
+
+msgid "plugins.themes.tricore.option.ctaSecondaryUrl.description"
+msgstr "Alamat http(s) lengkap atau path di situs ini. Kosongkan untuk menautkan ke panduan penyerahan naskah."
+
+msgid "plugins.themes.tricore.option.showDescription.label"
+msgstr "Ringkasan jurnal"
+
+msgid "plugins.themes.tricore.option.showDescription.option"
+msgstr "Tampilkan ringkasan jurnal di beranda."
+
+msgid "plugins.themes.tricore.option.showCurrentIssue.label"
+msgstr "Terbitan terkini"
+
+msgid "plugins.themes.tricore.option.showCurrentIssue.option"
+msgstr "Tampilkan daftar isi terbitan terkini di beranda."
+
+msgid "plugins.themes.tricore.option.latestArticlesCount.label"
+msgstr "Jumlah artikel terbaru di beranda (0 menyembunyikan blok)"
+
+msgid "plugins.themes.tricore.option.metrics.label"
+msgstr "Metrik jurnal"
+
+msgid "plugins.themes.tricore.option.metrics.description"
+msgstr "Satu metrik per baris dengan format Label|Nilai, misalnya: Tingkat penerimaan|25%. Maksimal 8 baris ditampilkan."
+
+msgid "plugins.themes.tricore.option.indexingInfo.label"
+msgstr "Informasi pengindeksan"
+
+msgid "plugins.themes.tricore.option.indexingInfo.description"
+msgstr "Basis data dan pengindeks tempat jurnal terdaftar. Ditampilkan di beranda."
+
+msgid "plugins.themes.tricore.option.socialFacebook.label"
+msgstr "Facebook"
+
+msgid "plugins.themes.tricore.option.socialX.label"
+msgstr "X (Twitter)"
+
+msgid "plugins.themes.tricore.option.socialInstagram.label"
+msgstr "Instagram"
+
+msgid "plugins.themes.tricore.option.socialLinkedin.label"
+msgstr "LinkedIn"
+
+msgid "plugins.themes.tricore.option.socialYoutube.label"
+msgstr "YouTube"
+
+msgid "plugins.themes.tricore.option.social.description"
+msgstr "Alamat https:// lengkap profil jurnal. Kolom kosong tidak ditampilkan. Muncul di footer."
+
+msgid "plugins.themes.tricore.error.colour"
+msgstr "Masukkan warna dalam kode hex, misalnya #1f5fbf."
+
+
+msgid "plugins.themes.tricore.error.url"
+msgstr "Masukkan alamat http(s) lengkap atau path di situs ini."
+
+msgid "plugins.themes.tricore.error.absoluteUrl"
+msgstr "Masukkan alamat lengkap yang diawali https://."
+
+msgid "plugins.themes.tricore.latestArticles"
+msgstr "Artikel Terbaru"
+
+msgid "plugins.themes.tricore.metrics"
+msgstr "Metrik Jurnal"
+
+msgid "plugins.themes.tricore.indexing"
+msgstr "Terindeks Di"
+
+msgid "plugins.themes.tricore.followUs"
+msgstr "Ikuti kami"
+
+msgid "plugins.themes.tricore.menu.toggle"
+msgstr "Menu"
+
+msgid "plugins.themes.tricore.submenu.toggle"
+msgstr "Tampilkan submenu {$title}"
+
+msgid "plugins.themes.tricore.social.label"
+msgstr "{$network} (terbuka di tab baru)"
+
+msgid "plugins.themes.tricore.option.group.sidebar"
+msgstr "Sidebar"
+
+msgid "plugins.themes.tricore.option.group.metrics"
+msgstr "Statistik artikel"
+
+msgid "plugins.themes.tricore.option.sidebarPages.label"
+msgstr "Tampilkan sidebar di"
+
+msgid "plugins.themes.tricore.option.sidebarPages.description"
+msgstr "Setiap jenis halaman diatur sendiri. Blok sidebar dipilih di Appearance > Setup > Sidebar. Halaman login dan registrasi tidak pernah menampilkan sidebar."
+
+msgid "plugins.themes.tricore.option.sidebarPages.homepage"
+msgstr "Beranda jurnal"
+
+msgid "plugins.themes.tricore.option.sidebarPages.archive"
+msgstr "Arsip"
+
+msgid "plugins.themes.tricore.option.sidebarPages.issue"
+msgstr "Terbitan (daftar isi)"
+
+msgid "plugins.themes.tricore.option.sidebarPages.article"
+msgstr "Halaman artikel"
+
+msgid "plugins.themes.tricore.option.sidebarPages.about"
+msgstr "Halaman Tentang (Tentang, Tim Editorial, Penyerahan, Kontak)"
+
+msgid "plugins.themes.tricore.option.sidebarPages.staticPage"
+msgstr "Halaman statis"
+
+msgid "plugins.themes.tricore.option.sidebarPages.search"
+msgstr "Pencarian"
+
+msgid "plugins.themes.tricore.option.sidebarPages.announcements"
+msgstr "Pengumuman"
+
+msgid "plugins.themes.tricore.option.showMetrics.label"
+msgstr "Dilihat dan diunduh"
+
+msgid "plugins.themes.tricore.option.showMetrics.option"
+msgstr "Tampilkan jumlah dilihat dan diunduh pada daftar artikel, arsip, dan halaman artikel."
+
+msgid "plugins.themes.tricore.option.showMetrics.description"
+msgstr "Angka diambil dari statistik penggunaan OJS (tampilan halaman abstrak, unduhan file galley dan file pelengkap) dan diperbarui saat statistik diproses."
+
+msgid "plugins.themes.tricore.metrics.views"
+msgstr "Dilihat"
+
+msgid "plugins.themes.tricore.metrics.downloads"
+msgstr "Diunduh"
+
+msgid "plugins.themes.tricore.metrics.viewsCount"
+msgstr "{$number} kali dilihat"
+
+msgid "plugins.themes.tricore.metrics.downloadsCount"
+msgstr "{$number} kali diunduh"
+
+msgid "plugins.themes.tricore.metrics.issue"
+msgstr "Total artikel dalam terbitan ini"
+
+msgid "plugins.themes.tricore.site.journals"
+msgstr "Jurnal Kami"
+
+msgid "plugins.themes.tricore.site.register"
+msgstr "Buat akun"
+
+msgid "plugins.themes.tricore.site.stats.journals"
+msgstr "Jurnal"
+
+msgid "plugins.themes.tricore.site.stats.issues"
+msgstr "Terbitan"
+
+msgid "plugins.themes.tricore.site.stats.articles"
+msgstr "Artikel"
+
+msgid "plugins.themes.tricore.site.issuesCount"
+msgstr "{$number} terbitan"
+
+msgid "plugins.themes.tricore.site.articlesCount"
+msgstr "{$number} artikel"
+
+msgid "plugins.themes.tricore.site.ctaTitle"
+msgstr "Siap berkontribusi?"
+
+msgid "plugins.themes.tricore.site.ctaText"
+msgstr "Buat akun untuk mengirim naskah, menjadi reviewer, atau mendapat kabar saat terbitan baru dipublikasikan."
+
+msgid "plugins.themes.tricore.site.badge"
+msgstr "{$journals} jurnal · {$articles} artikel terbit"
+
+msgid "plugins.themes.tricore.site.online"
+msgstr "online"
+
+msgid "plugins.themes.tricore.site.print"
+msgstr "cetak"
+
+msgid "plugins.themes.tricore.site.searchTitle"
+msgstr "Temukan artikel"
+
+msgid "plugins.themes.tricore.site.searchLead"
+msgstr "Cari judul, abstrak, dan penulis di semua jurnal pada portal ini."
+
+msgid "plugins.themes.tricore.site.searchPlaceholder"
+msgstr "Kata kunci, judul, atau penulis"
+
+msgid "plugins.themes.tricore.site.searchNote"
+msgstr "Jumlah mencakup terbitan dan artikel yang sudah dipublikasikan di semua jurnal."
+
+msgid "plugins.themes.tricore.footer.credit"
+msgstr "Tema Tricore oleh 3Core"
+
+msgid "plugins.themes.tricore.footer.newTab"
+msgstr "(terbuka di tab baru)"

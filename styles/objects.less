@@ -1,0 +1,171 @@
+/**
+ * @file plugins/themes/tricore/styles/objects.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Refinements of OJS objects styled by the base layer: article
+ *  summaries, issue table of contents, article page.
+ */
+
+.pkp_structure_main {
+	h1 {
+		font-size: @tricore-text-2xl;
+		line-height: @tricore-leading-tight;
+
+		@media (min-width: @tricore-bp-md) {
+			font-size: @tricore-text-3xl;
+		}
+	}
+
+	h2 {
+		font-size: @tricore-text-xl;
+		line-height: @tricore-leading-tight;
+	}
+
+	h3 {
+		font-size: @tricore-text-lg;
+		line-height: 1.35;
+	}
+
+	p {
+		line-height: @tricore-leading;
+	}
+}
+
+// Article summary in issue TOC, search results, sections
+.obj_article_summary {
+	padding: @tricore-space-4 0;
+	border-bottom: 1px solid @tricore-border;
+
+	> .title {
+		font-family: @tricore-font-heading;
+		font-size: @tricore-text-lg;
+		line-height: 1.35;
+
+		a {
+			color: @tricore-text;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				color: @tricore-primary;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.meta {
+		color: @tricore-text-muted;
+		font-size: @tricore-text-sm;
+	}
+
+	.galleys_links {
+		margin-top: @tricore-space-3;
+	}
+}
+
+.obj_issue_toc {
+	.sections:not(:first-child) {
+		margin-top: @tricore-space-6;
+	}
+
+	// The base layer pulls sections outside the content column with negative
+	// margins; keep them inside the Tricore container.
+	.sections .section,
+	.sections > .section {
+		margin-inline: 0;
+		margin-block: @tricore-space-6;
+		padding-inline: 0;
+	}
+
+	// Section headings only; article titles are h3/h4 inside .obj_article_summary
+	.sections .section > h2,
+	.sections .section > h3 {
+		color: @tricore-text-muted;
+		font-size: @tricore-text-sm;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	.cover img {
+		border-radius: @tricore-radius;
+		box-shadow: @tricore-shadow;
+	}
+}
+
+.obj_issue_summary {
+	.cover img {
+		border-radius: @tricore-radius;
+		box-shadow: @tricore-shadow;
+	}
+}
+
+// Article page
+.obj_article_details {
+	> .page_title {
+		font-size: @tricore-text-2xl;
+
+		@media (min-width: @tricore-bp-md) {
+			font-size: @tricore-text-3xl;
+		}
+	}
+
+	.item .label,
+	.sub_item .label {
+		color: @tricore-text-muted;
+		font-size: @tricore-text-sm;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.abstract {
+		line-height: 1.75;
+	}
+
+	.cover_image img {
+		border-radius: @tricore-radius;
+	}
+
+	// The base layer sizes the two columns with fixed pixel widths and
+	// negative margins; use a fluid grid that fills the Tricore container.
+	.row {
+		margin-inline: 0;
+		border-color: @tricore-border;
+	}
+
+	.entry_details {
+		margin-inline: 0;
+		background: @tricore-surface;
+		border: 1px solid @tricore-border;
+		border-radius: @tricore-radius;
+	}
+
+	@media (min-width: @tricore-bp-md) {
+		.row {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+			gap: @tricore-space-6;
+			align-items: start;
+			border: 0;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		.main_entry,
+		.entry_details {
+			float: none;
+			width: auto;
+			margin: 0;
+		}
+
+		.main_entry {
+			border: 0;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+/**
+ * @file plugins/themes/tricore/styles/print.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Print styles: article content only, black on white, link targets.
+ */
+
+@media print {
+	.tricore_header,
+	.tricore_footer,
+	.pkp_structure_sidebar,
+	.cmp_skip_to_content,
+	.tricore_hero_actions,
+	.cmp_breadcrumbs,
+	.obj_galley_link {
+		display: none !important;
+	}
+
+	body,
+	.pkp_structure_content {
+		display: block;
+		max-width: none;
+		padding: 0;
+		background: #fff;
+		color: #000;
+		font-size: 11pt;
+	}
+
+	.tricore_hero {
+		padding: 0;
+		background: none;
+		color: #000;
+	}
+
+	.tricore_hero_title,
+	.tricore_hero_subtitle {
+		color: #000 !important;
+	}
+
+	.obj_article_details .main_entry a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-size: 90%;
+		word-break: break-all;
+	}
+
+	h1, h2, h3 {
+		page-break-after: avoid;
+	}
+}
