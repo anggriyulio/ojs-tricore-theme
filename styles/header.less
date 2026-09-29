@@ -1,0 +1,319 @@
+/**
+ * @file plugins/themes/tricore/styles/header.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Site header, primary and user navigation, dropdowns, mobile menu.
+ *
+ * Markup: templates/frontend/components/header.tpl. Behaviour (toggle,
+ * dropdown buttons): js/main.js. Without JavaScript the menu is shown open
+ * on small screens and dropdowns still open on hover/focus.
+ */
+
+.tricore_header {
+	position: relative;
+	z-index: 100;
+	background: @tricore-header-bg;
+	color: @tricore-header-text;
+	border-bottom: 1px solid fade(@tricore-header-text, 12%);
+
+	a {
+		color: @tricore-header-text;
+		text-decoration: none;
+	}
+}
+
+.tricore_header_inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: @tricore-space-3 @tricore-space-5;
+	padding-block: @tricore-space-4;
+}
+
+// Brand
+.tricore_brand {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.tricore_brand_link {
+	display: inline-block;
+
+	&.is_text {
+		font-family: @tricore-font-heading;
+		font-size: @tricore-text-xl;
+		font-weight: 700;
+		line-height: @tricore-leading-tight;
+
+		@media (min-width: @tricore-bp-md) {
+			font-size: @tricore-text-2xl;
+		}
+	}
+
+	&.is_img img {
+		display: block;
+		width: auto;
+		max-height: 72px;
+	}
+}
+
+// Mobile toggle
+.tricore_nav_toggle {
+	display: none;
+	align-items: center;
+	gap: @tricore-space-2;
+	padding: @tricore-space-2 @tricore-space-3;
+	background: transparent;
+	border: 1px solid fade(@tricore-header-text, 30%);
+	border-radius: @tricore-radius;
+	color: @tricore-header-text;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.tricore_nav_toggle_icon {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 2px;
+	background: currentColor;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 18px;
+		height: 2px;
+		background: currentColor;
+	}
+
+	&::before { top: -6px; }
+	&::after { top: 6px; }
+}
+
+.tricore_nav_toggle[aria-expanded="true"] .tricore_nav_toggle_icon {
+	background: transparent;
+
+	&::before { top: 0; transform: rotate(45deg); }
+	&::after { top: 0; transform: rotate(-45deg); }
+}
+
+// Navigation
+.tricore_nav {
+	display: flex;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: @tricore-space-2 @tricore-space-5;
+}
+
+.tricore_nav_utility {
+	display: flex;
+	align-items: center;
+	gap: @tricore-space-4;
+}
+
+.tricore_menu {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	a {
+		display: block;
+		padding: @tricore-space-2 @tricore-space-3;
+		border-radius: @tricore-radius;
+		font-weight: 500;
+		line-height: 1.4;
+
+		&:hover,
+		&:focus {
+			background: fade(@tricore-header-text, 8%);
+			color: @tricore-header-text;
+		}
+	}
+
+	// Submenus: dropdown on large screens
+	ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		inset-inline-start: 0;
+		min-width: 220px;
+		margin: 0;
+		padding: @tricore-space-2;
+		list-style: none;
+		background: @tricore-bg;
+		border: 1px solid @tricore-border;
+		border-radius: @tricore-radius;
+		box-shadow: @tricore-shadow-lg;
+
+		a {
+			color: @tricore-text;
+			font-weight: 400;
+
+			&:hover,
+			&:focus {
+				background: @tricore-surface;
+				color: @tricore-primary;
+			}
+		}
+	}
+
+	li:hover > ul,
+	li:focus-within > ul,
+	li.is_open > ul {
+		display: block;
+	}
+}
+
+.tricore_menu_user ul {
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+}
+
+.tricore_submenu_toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	margin-inline-start: -@tricore-space-2;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	border-radius: @tricore-radius;
+	color: inherit;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		width: 7px;
+		height: 7px;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: translateY(-2px) rotate(45deg);
+	}
+
+	&[aria-expanded="true"]::after {
+		transform: translateY(2px) rotate(-135deg);
+	}
+}
+
+.tricore_search_link {
+	display: inline-flex;
+	align-items: center;
+	gap: @tricore-space-2;
+	padding: @tricore-space-2 @tricore-space-3;
+	border: 1px solid fade(@tricore-header-text, 20%);
+	border-radius: @tricore-radius;
+	font-weight: 500;
+
+	&:hover,
+	&:focus {
+		border-color: @tricore-header-text;
+	}
+}
+
+// Centered layout (theme option)
+.tricore_header_centered {
+	.tricore_header_inner {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.tricore_nav {
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+// Small screens: collapsible menu
+@media (max-width: (@tricore-bp-lg - 1)) {
+	.tricore_header_centered .tricore_header_inner {
+		flex-direction: row;
+		justify-content: space-between;
+		text-align: start;
+	}
+
+	.tricore_brand {
+		flex: 1 1 0;
+	}
+
+	.js .tricore_nav_toggle {
+		display: inline-flex;
+	}
+
+	.tricore_nav {
+		flex: 1 0 100%;
+		flex-direction: column;
+		align-items: stretch;
+		gap: @tricore-space-4;
+		padding-top: @tricore-space-3;
+		border-top: 1px solid fade(@tricore-header-text, 12%);
+	}
+
+	.js .tricore_nav:not(.is_open) {
+		display: none;
+	}
+
+	.tricore_nav_utility {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.tricore_menu {
+		flex-direction: column;
+
+		> li {
+			flex-wrap: wrap;
+		}
+
+		> li > a {
+			flex: 1 1 auto;
+		}
+
+		// Submenus are nested and expanded by their toggle button
+		ul {
+			position: static;
+			flex: 1 0 100%;
+			min-width: 0;
+			padding: 0 0 0 @tricore-space-4;
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+
+			a {
+				color: @tricore-header-text;
+			}
+		}
+
+		li:hover > ul,
+		li:focus-within > ul {
+			display: none;
+		}
+
+		li.is_open > ul {
+			display: block;
+		}
+	}
+
+	// Without JavaScript there is no toggle: keep submenus open
+	html:not(.js) .tricore_menu ul {
+		display: block;
+	}
+}

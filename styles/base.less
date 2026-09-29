@@ -1,0 +1,140 @@
+/**
+ * @file plugins/themes/tricore/styles/base.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Global typography, links, focus states and form controls.
+ */
+
+html,
+body {
+	font-family: @tricore-font-body;
+	font-size: 16px;
+	line-height: @tricore-leading;
+	color: @tricore-text;
+	background: @tricore-bg;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @tricore-font-heading;
+	line-height: @tricore-leading-tight;
+	color: @tricore-text;
+}
+
+a {
+	color: @tricore-primary;
+	text-underline-offset: 0.15em;
+
+	&:hover,
+	&:focus {
+		color: @tricore-primary-hover;
+	}
+}
+
+// Visible keyboard focus everywhere (WCAG 2.4.7)
+:focus-visible {
+	outline: 3px solid @tricore-focus;
+	outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+::selection {
+	background: @tricore-primary-soft;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+code, kbd, pre, samp {
+	font-family: @tricore-font-mono;
+}
+
+// Skip links (from OJS skipLinks.tpl), visible on focus
+.cmp_skip_to_content a {
+	background: @tricore-primary;
+	color: @tricore-on-primary;
+	border-radius: 0 0 @tricore-radius @tricore-radius;
+
+	&:focus {
+		color: @tricore-on-primary;
+	}
+}
+
+// Buttons of the base layer follow the tokens
+.cmp_button,
+.cmp_form .buttons button,
+.pkp_button_primary,
+button.submit {
+	background: @tricore-primary;
+	border: 1px solid @tricore-primary;
+	border-radius: @tricore-radius;
+	box-shadow: none;
+	color: @tricore-on-primary;
+	font-weight: 600;
+
+	&:hover,
+	&:focus {
+		background: @tricore-primary-hover;
+		border-color: @tricore-primary-hover;
+		box-shadow: none;
+		color: @tricore-on-primary;
+	}
+}
+
+.cmp_button_wire,
+.obj_galley_link {
+	border-color: @tricore-primary;
+	border-radius: @tricore-radius;
+	color: @tricore-primary;
+
+	&:hover,
+	&:focus {
+		background: @tricore-primary;
+		color: @tricore-on-primary;
+	}
+}
+
+.cmp_form {
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="search"],
+	select,
+	textarea {
+		border: 1px solid @tricore-border;
+		border-radius: @tricore-radius;
+		background: @tricore-bg;
+		color: @tricore-text;
+
+		&:focus {
+			border-color: @tricore-primary;
+			outline: 3px solid @tricore-primary-soft;
+			outline-offset: 0;
+		}
+	}
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition: none !important;
+		animation: none !important;
+		scroll-behavior: auto !important;
+	}
+}

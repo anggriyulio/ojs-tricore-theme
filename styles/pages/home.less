@@ -1,0 +1,163 @@
+/**
+ * @file plugins/themes/tricore/styles/pages/home.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Journal homepage: hero, metrics, latest articles, current issue,
+ *  indexing information.
+ */
+
+.tricore_hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: @tricore-space-6;
+	align-items: center;
+	margin-bottom: @tricore-space-7;
+	padding: @tricore-space-6 @tricore-space-5;
+	background: @tricore-secondary;
+	border-radius: @tricore-radius;
+	color: @tricore-on-secondary;
+
+	@media (min-width: @tricore-bp-md) {
+		padding: @tricore-space-8 @tricore-space-7;
+
+		&.has_image {
+			grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+		}
+	}
+}
+
+.pkp_structure_main .tricore_hero_title,
+.tricore_hero_title {
+	margin: 0 0 @tricore-space-4;
+	font-size: @tricore-text-2xl;
+	line-height: @tricore-leading-tight;
+	color: @tricore-on-secondary;
+
+	@media (min-width: @tricore-bp-md) {
+		font-size: @tricore-text-3xl;
+	}
+}
+
+.pkp_structure_main .tricore_hero_subtitle,
+.tricore_hero_subtitle {
+	max-width: 60ch;
+	margin: 0 0 @tricore-space-5;
+	font-size: @tricore-text-lg;
+	line-height: @tricore-leading;
+	color: fade(@tricore-on-secondary, 85%);
+}
+
+.tricore_hero_actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: @tricore-space-3;
+
+	.tricore_btn_outline {
+		color: @tricore-on-secondary;
+
+		&:hover,
+		&:focus {
+			background: @tricore-on-secondary;
+			border-color: @tricore-on-secondary;
+			color: @tricore-secondary;
+		}
+	}
+
+	// A primary button on a background of the same colour needs an edge
+	.tricore_btn_primary {
+		border-color: fade(@tricore-on-secondary, 40%);
+	}
+}
+
+.tricore_hero :focus-visible {
+	outline-color: @tricore-on-secondary;
+}
+
+.tricore_hero_media img {
+	display: block;
+	width: 100%;
+	border-radius: @tricore-radius;
+}
+
+// Metrics strip
+.tricore_metrics {
+	margin-block: @tricore-space-7;
+}
+
+.tricore_metrics_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: @tricore-space-4;
+	margin: 0;
+}
+
+.tricore_metric {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: @tricore-space-1;
+	padding: @tricore-space-4 @tricore-space-5;
+	background: @tricore-surface;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+}
+
+.tricore_metric_value {
+	margin: 0;
+	font-family: @tricore-font-heading;
+	font-size: @tricore-text-2xl;
+	font-weight: 700;
+	line-height: 1.2;
+	color: @tricore-text;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 3px;
+		margin-top: @tricore-space-2;
+		background: @tricore-accent;
+		border-radius: 2px;
+	}
+}
+
+.tricore_metric_label {
+	font-size: @tricore-text-sm;
+	color: @tricore-text-muted;
+}
+
+// Current issue block
+.tricore_home .current_issue {
+	.current_issue_title {
+		margin-bottom: @tricore-space-4;
+		font-weight: 600;
+		color: @tricore-text-muted;
+	}
+
+	.read_more {
+		margin-top: @tricore-space-5;
+	}
+}
+
+// Indexing
+.tricore_indexing_body {
+	padding: @tricore-space-5;
+	background: @tricore-surface;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+
+	p:first-child { margin-top: 0; }
+	p:last-child { margin-bottom: 0; }
+
+	img {
+		display: inline-block;
+		max-height: 48px;
+		margin: @tricore-space-2 @tricore-space-3 @tricore-space-2 0;
+		vertical-align: middle;
+	}
+}
+
+.tricore_home .homepage_image img {
+	border-radius: @tricore-radius;
+}

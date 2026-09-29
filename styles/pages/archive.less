@@ -1,0 +1,143 @@
+/**
+ * @file plugins/themes/tricore/styles/pages/archive.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Issue archive as a grid of cover cards. Uses the OJS markup of
+ *  issueArchive.tpl and issue_summary.tpl (same in 3.3, 3.4 and 3.5), no
+ *  template override needed.
+ */
+
+.page_issue_archive .issues_archive {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: @tricore-space-5;
+	margin: 0 0 @tricore-space-6;
+	padding: 0;
+	list-style: none;
+	border: 0;
+
+	> li,
+	> li:first-child {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+}
+
+.page_issue_archive .obj_issue_summary {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	background: @tricore-bg;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+	box-shadow: @tricore-shadow;
+	transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+
+	&:hover,
+	&:focus-within {
+		border-color: fade(@tricore-primary, 45%);
+		box-shadow: @tricore-shadow-lg;
+		transform: translateY(-2px);
+	}
+
+	.cover {
+		display: block;
+		float: none;
+		width: auto;
+		margin: 0;
+		padding: 0;
+		background: @tricore-surface;
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: none;
+			max-height: none;
+			aspect-ratio: 3 / 4;
+			object-fit: cover;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		padding: @tricore-space-4 @tricore-space-4 @tricore-space-2;
+		font-size: @tricore-text-base;
+		line-height: 1.35;
+	}
+
+	.title {
+		color: @tricore-text;
+		text-decoration: none;
+
+		// The whole card is clickable through the title link
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: @tricore-primary;
+		}
+	}
+
+	.series {
+		margin-top: @tricore-space-1;
+		font-size: @tricore-text-sm;
+		font-weight: 400;
+		color: @tricore-text-muted;
+	}
+
+	.description {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		padding: 0 @tricore-space-4 @tricore-space-4;
+		font-size: @tricore-text-sm;
+		color: @tricore-text-muted;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+// Issue page: cover next to the issue details
+.obj_issue_toc .heading .cover img {
+	max-width: 220px;
+}
+
+.page_issue_archive .tricore_issue_body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	min-width: 0;
+
+	.tricore_metrics_inline {
+		margin-top: auto;
+	}
+}
+
+// Phones: horizontal issue cards (small cover on the left)
+@media (max-width: (@tricore-bp-sm - 1)) {
+	.page_issue_archive .obj_issue_summary {
+		flex-direction: row;
+
+		.cover {
+			flex: 0 0 96px;
+		}
+
+		.cover img {
+			height: 100%;
+			aspect-ratio: auto;
+		}
+	}
+}

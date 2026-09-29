@@ -1,0 +1,318 @@
+/**
+ * @file plugins/themes/tricore/styles/pages/auth.less
+ *
+ * Copyright (c) 2026 Tricore Innovations (3Core)
+ * Distributed under the GNU GPL v3.
+ *
+ * @brief Login, registration, lost password and reset password pages.
+ *
+ * Styles the OJS markup (userLogin.tpl, userRegister.tpl +
+ * registrationForm.tpl, userLostPassword.tpl, resetPassword.tpl), which
+ * differs between 3.3, 3.4 and 3.5 (captcha, ORCID, user groups) but keeps
+ * the same class names; no template override is needed. These pages never
+ * show the sidebar (PageContext::AUTH).
+ */
+
+@tricore-auth-width: 440px;
+@tricore-auth-width-wide: 760px;
+@tricore-input-height: 44px;
+
+.page_login,
+.page_lost_password,
+.page_reset_password,
+.page_register {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: @tricore-auth-width;
+	margin: @tricore-space-4 auto @tricore-space-7;
+	padding: @tricore-space-6 @tricore-space-5;
+	background: @tricore-bg;
+	border: 1px solid @tricore-border;
+	border-radius: @tricore-radius;
+	box-shadow: @tricore-shadow-lg;
+
+	@media (min-width: @tricore-bp-sm) {
+		padding: @tricore-space-7 @tricore-space-7 @tricore-space-6;
+	}
+
+	// Breadcrumbs are redundant inside the card
+	.cmp_breadcrumbs {
+		display: none;
+	}
+
+	> h1 {
+		margin: 0 0 @tricore-space-2;
+		font-size: @tricore-text-2xl;
+		line-height: @tricore-leading-tight;
+	}
+
+	// "* Required field" note and messages under the title
+	> p {
+		margin: 0 0 @tricore-space-5;
+		font-size: @tricore-text-sm;
+		color: @tricore-text-muted;
+	}
+}
+
+.page_register {
+	max-width: @tricore-auth-width-wide;
+}
+
+// Form layout shared by all auth pages
+.page_login,
+.page_lost_password,
+.page_reset_password,
+.page_register {
+
+	.cmp_form {
+		max-width: none;
+		margin: 0;
+
+		fieldset {
+			min-width: 0;
+			margin: 0 0 @tricore-space-5;
+			padding: 0;
+			border: 0;
+		}
+
+		legend {
+			display: block;
+			width: 100%;
+			margin: 0 0 @tricore-space-3;
+			padding: 0 0 @tricore-space-2;
+			border-bottom: 1px solid @tricore-border;
+			font-family: @tricore-font-heading;
+			font-size: @tricore-text-lg;
+			font-weight: 700;
+		}
+
+		.fields > div {
+			position: static;
+			margin: 0 0 @tricore-space-4;
+			padding: 0;
+		}
+
+		label {
+			display: block;
+			margin: 0;
+		}
+
+		// Field label above the input
+		.label {
+			display: block;
+			margin: 0 0 6px;
+			font-size: @tricore-text-sm;
+			font-style: normal;
+			font-weight: 600;
+			color: @tricore-text;
+
+			.required {
+				color: #b42318;
+			}
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="url"],
+		input[type="tel"],
+		select {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			max-width: none;
+			height: @tricore-input-height;
+			padding: 0 @tricore-space-3;
+			background: @tricore-bg;
+			border: 1px solid darken(@tricore-border, 8%);
+			border-radius: @tricore-radius;
+			font: inherit;
+			font-size: @tricore-text-base;
+			line-height: @tricore-input-height - 2px;
+			color: @tricore-text;
+			transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+			&:hover {
+				border-color: darken(@tricore-border, 20%);
+			}
+
+			&:focus {
+				border-color: @tricore-primary;
+				outline: none;
+				box-shadow: 0 0 0 3px @tricore-primary-soft;
+			}
+		}
+
+		textarea {
+			box-sizing: border-box;
+			width: 100%;
+			padding: @tricore-space-2 @tricore-space-3;
+			border: 1px solid darken(@tricore-border, 8%);
+			border-radius: @tricore-radius;
+			font: inherit;
+		}
+
+		// Checkboxes: box and text on one line
+		.checkbox label,
+		.optin label,
+		.remember label,
+		label.remember,
+		.roles label,
+		.consent label {
+			display: flex;
+			align-items: flex-start;
+			gap: @tricore-space-2;
+			font-size: @tricore-text-sm;
+			line-height: 1.5;
+
+			.label {
+				display: inline;
+				margin: 0;
+				font-weight: 400;
+			}
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			flex: 0 0 auto;
+			width: 18px;
+			height: 18px;
+			margin: 2px 0 0;
+			accent-color: @tricore-primary;
+		}
+
+		// Error summary at the top of the form
+		.pkp_form_error,
+		#formErrors {
+			margin: 0 0 @tricore-space-4;
+			padding: @tricore-space-3 @tricore-space-4;
+			background: #fef3f2;
+			border: 1px solid #fecdca;
+			border-radius: @tricore-radius;
+			font-size: @tricore-text-sm;
+			font-weight: 600;
+			line-height: 1.5;
+			color: #b42318;
+		}
+
+		// Actions: full-width primary button, secondary link under it
+		.buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: @tricore-space-3;
+			margin-top: @tricore-space-2;
+			padding: 0;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+
+			button,
+			.submit {
+				float: none;
+				width: 100%;
+				height: @tricore-input-height + 4px;
+				margin: 0;
+				padding: 0 @tricore-space-5;
+				background: @tricore-primary;
+				border: 1px solid @tricore-primary;
+				border-radius: @tricore-radius;
+				box-shadow: none;
+				font: inherit;
+				font-size: @tricore-text-base;
+				font-weight: 600;
+				line-height: 1;
+				color: @tricore-on-primary;
+				cursor: pointer;
+
+				&:hover,
+				&:focus {
+					background: @tricore-primary-hover;
+					border-color: @tricore-primary-hover;
+				}
+			}
+
+			a {
+				float: none;
+				margin: 0;
+				font-size: @tricore-text-sm;
+				line-height: 1.5;
+				text-align: center;
+			}
+		}
+	}
+
+	// Captcha widgets
+	.recaptcha_wrapper,
+	.altcha_wrapper {
+		.fields > div {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Login: "forgot password" link aligned right under the password field
+.page_login {
+	.cmp_form .password {
+		label {
+			display: flex;
+			flex-direction: column;
+		}
+
+		a {
+			align-self: flex-end;
+			margin-top: @tricore-space-2;
+			font-size: @tricore-text-sm;
+			font-style: normal;
+		}
+	}
+
+	.cmp_form .remember {
+		margin-bottom: @tricore-space-5;
+	}
+
+	// Register link below the button, as a quiet secondary action
+	.cmp_form .buttons .register {
+		padding-top: @tricore-space-3;
+		border-top: 1px solid @tricore-border;
+	}
+}
+
+// Register: two columns for the identity and login fields
+.page_register {
+	@media (min-width: @tricore-bp-md) {
+		.cmp_form .identity .fields,
+		.cmp_form .login .fields {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0 @tricore-space-4;
+		}
+	}
+
+	.cmp_form .consent,
+	.cmp_form .reviewer {
+		.fields > div {
+			margin-bottom: @tricore-space-3;
+		}
+	}
+
+	.cmp_form .reviewer_interests.is_visible {
+		padding-bottom: 0;
+	}
+
+	.cmp_form .buttons {
+		@media (min-width: @tricore-bp-md) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			button,
+			.submit {
+				width: auto;
+				min-width: 200px;
+			}
+		}
+	}
+}
